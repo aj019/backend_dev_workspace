@@ -38,6 +38,13 @@ app.get('/flights/:from-:to', (req,res) => {
     res.send(req.params)
 })
 
+// -- Response type json & Status Codes
+
+app.get('/res-json',(req,res) => {
+    //res.status(200).json({'user': 'Anuj'});
+    res.status(404).json({'error': 'File not found'});
+})
+
 // Post Request 
 
 app.post('/login',(req,res) => {
